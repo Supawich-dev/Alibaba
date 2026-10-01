@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alibaba Cloud — Future Cloud Experience</title>
+<meta name="description" content="Interactive educational presentation about Alibaba Cloud">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☁️</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+<header class="nav" id="nav">
+  <a class="brand" href="#home">ALIBABA <b>CLOUD</b></a>
+  <button class="burger" id="burger" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="menu">☰</button>
+  <nav id="menu" aria-label="เมนูหลัก">
+    <a href="#home">Home</a><a href="#overview">Overview</a><a href="#services">Services</a><a href="#infrastructure">Infrastructure</a><a href="#pricing">Pricing</a><a href="#proscons">Pros &amp; Cons</a><a href="#certification">Certification</a><a href="#conclusion">Conclusion</a><a href="#credits">Credits</a>
+    <button id="theme" aria-label="สลับธีม">◐</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <p class="eyebrow">ALIBABA CLOUD</p>
+    <h1>FUTURE CLOUD <span>EXPERIENCE</span></h1>
+    <p class="lead">Powering the Intelligent Digital Future</p>
+    <a class="btn" href="#overview">EXPLORE THE CLOUD</a>
+  </div>
+</section>
+
+<section id="overview">
+  <h2 class="reveal">Overview</h2>
+  <p class="reveal sub">Alibaba Cloud (Alibaba Group) ให้บริการ Cloud Computing ครอบคลุมการประมวลผล จัดเก็บข้อมูล เครือข่าย ฐานข้อมูล ความปลอดภัย Big Data และ AI เว็บนี้เป็นสื่อการเรียนรู้เชิงวิชาการ ไม่ใช่เว็บทางการของ Alibaba Cloud</p>
+  <div class="stats reveal">
+    <div><b>11</b><span>กลุ่มบริการที่นำเสนอ</span></div>
+    <div><b>3</b><span>ระดับ Certification</span></div>
+    <div><b>4</b><span>ส่วนประกอบต้นทุนหลัก</span></div>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="reveal">Cloud Service Universe</h2>
+  <p class="reveal sub">แตะ/คลิกที่ Node เพื่อดูรายละเอียดของแต่ละบริการ</p>
+  <div class="universe reveal" id="universe"><div class="core">ALIBABA<br>CLOUD</div></div>
+
+  <h3 class="reveal">Interactive Architecture &amp; Data Flow</h3>
+  <p class="reveal sub">แตะ Node เพื่อดูคำอธิบาย — แสงที่วิ่งแสดงการไหลของคำขอ (ภาพจำลองเพื่อการศึกษา)</p>
+  <div class="arch reveal" id="arch" role="list"></div>
+  <div class="archinfo" id="archInfo" aria-live="polite"></div>
+
+  <h3 class="reveal">Cloud in Action</h3>
+  <div class="cases reveal" id="cases"></div>
+</section>
+
+<section id="infrastructure">
+  <h2 class="reveal">Global Infrastructure</h2>
+  <p class="reveal sub">Alibaba Cloud จัดโครงสร้างเป็น <b>Region</b> (พื้นที่ทางภูมิศาสตร์) ซึ่งประกอบด้วย <b>Availability Zone</b> (กลุ่ม Data Center ที่แยกกันทางโครงสร้างพื้นฐาน) เชื่อมต่อกันด้วย Global Network</p>
+  <div class="mapwrap reveal">
+    <svg id="map" viewBox="0 0 100 50" role="img" aria-label="แผนที่จุด Region ตัวอย่าง"></svg>
+    <div class="archinfo" id="mapInfo" aria-live="polite">เลือกจุดบนแผนที่</div>
+  </div>
+  <p class="note">แผนที่นี้เป็นภาพแสดงแนวคิด ตำแหน่งโดยประมาณ ไม่ครบทุก Region จำนวนและรายชื่อ Region ล่าสุดโปรดตรวจสอบที่หน้า Global Infrastructure ทางการ (ดู References)</p>
+</section>
+
+<section id="pricing">
+  <h2 class="reveal">Cloud Cost Experience</h2>
+  <div class="models reveal">
+    <div><h4>Pay-As-You-Go</h4><p>จ่ายตามการใช้งานจริง ยืดหยุ่น เหมาะกับงานทดลอง</p></div>
+    <div><h4>Subscription</h4><p>ชำระล่วงหน้าตามระยะเวลา มักเหมาะกับงานที่ใช้งานต่อเนื่อง</p></div>
+    <div><h4>Savings / Commitment</h4><p>มีรูปแบบให้ผูกพันการใช้งานเพื่อลดต้นทุนในบางบริการ — ตรวจสอบเงื่อนไขล่าสุด</p></div>
+    <div><h4>Free Trial &amp; Cost Mgmt</h4><p>บางบริการมีสิทธิ์ทดลองใช้ และมีเครื่องมือดูค่าใช้จ่ายใน Console — ขึ้นกับภูมิภาค/บัญชี</p></div>
+  </div>
+  <div class="sim reveal">
+    <div class="chips" id="chips" role="group" aria-label="เลือกส่วนประกอบ"></div>
+    <div id="bars"></div>
+    <p class="note"><b>Simulation / Educational Visualization</b> — สัดส่วนสมมติเพื่อการเรียนรู้ ไม่ใช่ราคาจริง ดูราคาจริงที่หน้า Pricing ทางการ</p>
+  </div>
+</section>
+
+<section id="proscons">
+  <h2 class="reveal">Strengths &amp; Considerations</h2>
+  <div class="balance">
+    <div class="side good reveal"><h3>STRENGTHS</h3><ul><li>โครงสร้างพื้นฐานหลาย Region ทั่วโลก</li><li>ขยายระบบได้ตามความต้องการ (Scalability)</li><li>พอร์ตโฟลิโอบริการกว้าง ตั้งแต่ IaaS ถึง AI</li><li>ฟีเจอร์สำหรับองค์กรและความปลอดภัย</li></ul></div>
+    <div class="side warn reveal"><h3>CONSIDERATIONS</h3><ul><li>โครงสร้างราคาซับซ้อน ต้องวางแผนต้นทุน</li><li>ต้องใช้เวลาเรียนรู้เครื่องมือและบริการ</li><li>ความเสี่ยง Vendor Lock-in หากใช้บริการเฉพาะเจ้า</li><li>ความพร้อมของบริการต่างกันในแต่ละ Region</li></ul></div>
+  </div>
+</section>
+
+<section id="certification">
+  <h2 class="reveal">Alibaba Cloud Certification Path</h2>
+  <p class="reveal sub">แตะแต่ละระดับเพื่อดูรายละเอียด</p>
+  <div class="path reveal" id="path"></div>
+  <div class="archinfo" id="pathInfo" aria-live="polite"></div>
+  <p class="note">ชื่อและสถานะของ Certification/ข้อสอบอาจเปลี่ยนแปลง กรุณายืนยันที่หน้า Certification ทางการก่อนสมัครสอบ</p>
+</section>
+
+<section id="conclusion">
+  <h2 class="reveal">Conclusion</h2>
+  <p class="reveal sub">Alibaba Cloud เป็นตัวเลือก Cloud ที่ครอบคลุมตั้งแต่โครงสร้างพื้นฐานจนถึง AI การเลือกใช้ควรพิจารณาความต้องการงาน ต้นทุน และ Region ที่เกี่ยวข้อง ควบคู่กับการศึกษาเอกสารทางการ</p>
+</section>
+
+<section id="references">
+  <h2 class="reveal">References</h2>
+  <div class="refs reveal">
+    <div><h4>Official Sources</h4><ul>
+      <li><a href="https://www.alibabacloud.com/" target="_blank" rel="noopener noreferrer">Alibaba Cloud</a></li>
+      <li><a href="https://www.alibabacloud.com/help" target="_blank" rel="noopener noreferrer">Alibaba Cloud Documentation</a></li>
+      <li><a href="https://www.alibabacloud.com/pricing" target="_blank" rel="noopener noreferrer">Alibaba Cloud Pricing</a></li>
+      <li><a href="https://www.alibabacloud.com/global-locations" target="_blank" rel="noopener noreferrer">Alibaba Cloud Global Infrastructure</a></li>
+      <li><a href="https://www.alibabacloud.com/en/training-and-certification" target="_blank" rel="noopener noreferrer">Alibaba Cloud Certification</a></li></ul></div>
+    <div><h4>Supporting Sources</h4><ul>
+      <li><a href="https://en.wikipedia.org/wiki/Alibaba_Cloud" target="_blank" rel="noopener noreferrer">Wikipedia — Alibaba Cloud</a></li>
+      <li><a href="https://csrc.nist.gov/pubs/sp/800/145/final" target="_blank" rel="noopener noreferrer">NIST SP 800-145 — Cloud Computing Definition</a></li></ul></div>
+  </div>
+  <p class="note">หมายเหตุ: ลิงก์ทางการอาจเปลี่ยน URL ตามการปรับปรุงเว็บไซต์ ข้อมูลที่ยืนยันไม่ได้ในขณะจัดทำระบุไว้ในหน้าอย่างโปร่งใส</p>
+</section>
+
+<section class="credits" id="credits">
+  <canvas id="endCanvas" aria-hidden="true"></canvas>
+  <div class="credits-in reveal">
+    <h2 class="big">THANK YOU</h2>
+    <p class="eyebrow">Alibaba Cloud</p>
+    <p class="lead">FUTURE CLOUD EXPERIENCE</p>
+    <h4>คณะผู้จัดทำ</h4>
+    <ul class="team">
+      <li>65010911103 นายพงศกร ไกรจันทร์</li>
+      <li>67010918006 นายศุภวิชญ์ สุโนภักดิ์</li>
+      <li>67010918007 สุทธิภูมินท์ อาจหาร</li>
+      <li>67010918054 พิพัฒน์ เมืองผง</li>
+    </ul>
+    <h4>เสนอ</h4>
+    <p>อาจารย์อิทธิพล เอี่ยมภูงา<br><small>อาจารย์ผู้สอนประจำวิชา</small></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><b>Alibaba Cloud</b> · Future Cloud Experience · Academic Presentation Website · © 2026</p>
+  <p><a href="#references">References</a> · <a href="https://www.alibabacloud.com/" target="_blank" rel="noopener noreferrer">alibabacloud.com</a></p>
+</footer>
+
+<button id="top" aria-label="กลับขึ้นบน">↑</button>
+<aside id="panel" class="panel" role="dialog" aria-modal="true" aria-labelledby="pTitle" hidden>
+  <button id="pClose" aria-label="ปิด">✕</button>
+  <p class="eyebrow" id="pTag"></p><h3 id="pTitle"></h3><div id="pBody"></div>
+</aside>
+<script src="script.js"></script>
+</body>
+</html>
